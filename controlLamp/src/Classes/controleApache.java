@@ -19,7 +19,7 @@ public class controleApache {
         Runtime run = Runtime.getRuntime();
         try{
             
-            String command = "service apache2 start";
+            String command = "systemctl start httpd";
             run.exec(command);
             return true;
             
@@ -33,7 +33,7 @@ public class controleApache {
         Runtime run = Runtime.getRuntime();
         try{
             
-            String command = "service apache2 stop";
+            String command = "systemctl stop httpd";
             run.exec(command);
             return true;
             

@@ -20,7 +20,7 @@ public class controleMysql {
         Runtime run = Runtime.getRuntime();
         try{
             
-            String command = "service mysql start";
+            String command = "systemctl start mysqld";
             run.exec(command);
             return true;
             
@@ -34,7 +34,7 @@ public class controleMysql {
         Runtime run = Runtime.getRuntime();
         try{
             
-            String command = "service mysql stop";
+            String command = "systemctl stop mysqld";
             run.exec(command);
             return true;
             
