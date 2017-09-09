@@ -1,23 +1,26 @@
+package Classes;
+
 
 import java.io.IOException;
 
 /*
- * Classe capas de executar os comandos do apache no terminal via codigo fonte java
- * 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 
 /**
  *
  * @author eduardo
  */
-public class controleApache {
+public class controleMysql {
     
-    public boolean iniciarApache(){
+    public boolean iniciarMysql(){
         
         Runtime run = Runtime.getRuntime();
         try{
             
-            String command = "service apache2 start";
+            String command = "service mysql start";
             run.exec(command);
             return true;
             
@@ -26,12 +29,12 @@ public class controleApache {
         }
         
     }
-    public boolean desligarApache(){
+    public boolean desligarMysql(){
         
         Runtime run = Runtime.getRuntime();
         try{
             
-            String command = "service apache2 stop";
+            String command = "service mysql stop";
             run.exec(command);
             return true;
             
